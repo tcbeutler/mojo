@@ -1,3 +1,14 @@
+/*
+Custom css properties
+*/
 .fill-container {
   height: 100%;
+}
+
+
+/*
+Modifications to ionic
+*/
+.slider-pager {
+  visibility: hidden
 }
