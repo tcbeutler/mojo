@@ -4,7 +4,7 @@ angular.module('mojo.directives')
   return {
     restrict: 'E',
     scope: {
-      featuredPanel: '=featued'
+      featuredPanel: '=featured'
     },
     templateUrl: 'views/featured.html'
   }
