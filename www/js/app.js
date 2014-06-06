@@ -1,6 +1,7 @@
 angular.module('mojo.controllers', []);
+angular.module('mojo.directives', []);
 
-angular.module('mojo', ['ionic', 'mojo.controllers'])
+angular.module('mojo', ['ionic', 'mojo.controllers', 'mojo.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -19,23 +20,10 @@ angular.module('mojo', ['ionic', 'mojo.controllers'])
     .state('slidebox', {
       url: "/slidebox",
       templateUrl: "views/slidebox.html",
-      abstract: true,
       controller: 'SlideBoxCtrl'
-    })
-
-    .state('slidebox.featured', {
-      url: "/featured",
-      templateUrl: 'views/featured.html',
-      controller: 'FeaturedCtrl'
-    })
-
-    .state('slidebox.drinks', {
-      url: "/drinks",
-      templateUrl: 'views/drinks.html',
-      controller: 'DrinksCtrl'
     })
 
     ;
 
-  $urlRouterProvider.otherwise('/slidebox/featured');
+  $urlRouterProvider.otherwise('/slidebox');
 });
