@@ -123,6 +123,18 @@ walk = (dir, done) ->
 # 
 log = (message, color, explanation) -> console.log color + message + reset + ' ' + (explanation or '')
 
+# ## *move*
+#
+# **given** a source directory
+# **and** a destination directory
+# **then** copies all non-coffee files 
+move = (src, dest) ->
+  walk src, (err, results) ->
+    for f in results
+      if isFileType f, ['.js', '.css', '.html']
+        fs.createReadStream(f).pipe(fs.createWriteStream(f.replace src, dest));
+
+
 # ## *launch*
 #
 # **given** string as a cmd
@@ -157,6 +169,7 @@ build = (watch, callback) ->
   options = options.concat files
   options.unshift '-w' if watch
   launch 'coffee', options, callback
+  move 'src', 'lib'
 
 # ## *unlinkIfCoffeeFile*
 #
@@ -222,3 +235,9 @@ mocha = (options, callback) ->
 
 run = ->
   launch 'node', ['lib/app.js']
+
+isFileType = (file, fileTypes) ->
+  for type in fileTypes
+    if (file.indexOf type, file.length - type.length) != -1
+      return true
+  return false
