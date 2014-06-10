@@ -1,4 +1,4 @@
-angular.module 'mojo.controllers' 
+module = angular.module 'mojo.controllers' 
 
-.controller 'FeaturedCtrl', ($scope) ->
+module.controller 'FeaturedCtrl', ($scope) ->
   $scope.test = "Featured stuff here"

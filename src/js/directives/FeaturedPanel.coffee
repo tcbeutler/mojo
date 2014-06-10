@@ -1,6 +1,6 @@
-angular.module 'mojo.directives'
+module = angular.module 'mojo.directives'
 
-.directive 'featuredPanel', ->
+module.directive 'featuredPanel', ->
   restrict: "E"
   scope:
     featuredPanel: '=featured'

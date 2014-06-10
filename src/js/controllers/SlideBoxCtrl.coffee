@@ -1,3 +1,3 @@
-angular.module 'mojo.controllers' 
+module = angular.module 'mojo.controllers' 
 
-.controller 'SlideBoxCtrl', ($scope) ->
+module.controller 'SlideBoxCtrl', ($scope) ->

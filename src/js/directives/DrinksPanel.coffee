@@ -1,4 +1,4 @@
-angular.module 'mojo.directives' 
+module = angular.module 'mojo.directives' 
 
 .directive 'drinksPanel', -> 
   restrict: 'E',

@@ -1,6 +1,6 @@
-angular.module 'mojo.controllers'
+module = angular.module 'mojo.controllers'
 
-controller "DrinksCtrl", [
+module.controller "DrinksCtrl", [
   "$scope"
   (scope) ->
     scope.test = "Drinks stuff here"
