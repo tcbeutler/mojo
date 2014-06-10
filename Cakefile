@@ -8,6 +8,7 @@ files = [
 ]
 
 fs = require 'fs'
+fsx = require 'fs-extra'
 {print} = require 'util'
 {spawn, exec} = require 'child_process'
 
@@ -132,7 +133,7 @@ move = (src, dest) ->
   walk src, (err, results) ->
     for f in results
       if isFileType f, ['.js', '.css', '.html']
-        fs.createReadStream(f).pipe(fs.createWriteStream(f.replace src, dest));
+        fsx.copy f, f.replace(src, dest)
 
 
 # ## *launch*
