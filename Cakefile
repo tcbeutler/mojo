@@ -235,7 +235,7 @@ mocha = (options, callback) ->
   launch 'node', options, callback
 
 run = ->
-  launch 'node', ['lib/app.js']
+  launch 'node', ['start.js']
 
 isFileType = (file, fileTypes) ->
   for type in fileTypes
