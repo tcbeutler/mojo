@@ -1,5 +1,6 @@
 https://github.com/angular/angular-seed/blob/master/app/js/controllers.js
 http://nathanleclaire.com/blog/2013/12/13/how-to-unit-test-controllers-in-angularjs-without-setting-your-hair-on-fire/
+https://github.com/angular/angular-seed/blob/master/test/unit/controllersSpec.js
 
 Ionic App Base
 =====================
