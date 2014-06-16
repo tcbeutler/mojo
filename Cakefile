@@ -58,7 +58,7 @@ task 'watch', 'compile and watch', -> build true, -> log ":-)", green
 # ```
 # cake test
 # ```
-task 'test', 'run tests', -> build -> mocha -> log ":)", green
+task 'test', 'run tests', -> build -> karma -> log ":)", green
 
 # ## *clean*
 #
@@ -220,19 +220,15 @@ moduleExists = (name) ->
 # **given** optional array of option flags
 # **and** optional function as callback
 # **then** invoke launch passing mocha command
-mocha = (options, callback) ->
-  #if moduleExists('mocha')
+karma = (options, callback) ->
   if typeof options is 'function'
     callback = options
     options = []
   # add coffee directive
-  options.push 'node_modules/mocha/bin/_mocha'
-  options.push '--compilers'
-  options.push 'coffee:coffee-script/register'
-  options.push '--reporter'
-  options.push 'spec'
+  options.push 'start'
+  options.push 'test/karma.conf.js'
   
-  launch 'node', options, callback
+  launch 'karma', options, callback
 
 run = ->
   launch 'node', ['start.js']

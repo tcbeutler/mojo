@@ -1,3 +1,4 @@
-module = angular.module 'mojo.controllers' 
+do ->
+  module = angular.module 'mojo.controllers' 
 
-module.controller 'SlideBoxCtrl', ($scope) ->
+  module.controller 'SlideBoxCtrl', ($scope) ->

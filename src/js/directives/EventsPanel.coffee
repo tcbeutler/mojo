@@ -1,7 +1,8 @@
-module = angular.module 'mojo.directives' 
+do ->
+  module = angular.module 'mojo.directives' 
 
-module.directive 'eventsPanel', ->
-  restrict: 'E'
-  scope:
-    featuredPanel: '=events'
-  templateUrl: 'views/events.html'
+  module.directive 'eventsPanel', ->
+    restrict: 'E'
+    scope:
+      featuredPanel: '=events'
+    templateUrl: 'views/events.html'
