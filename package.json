@@ -26,6 +26,6 @@
   },
   "scripts": {
     "start": "node start.js",
-    "test": "node node_modules/mocha/bin/_mocha --recursive"
+    "test": "cake test"
   }
 }
