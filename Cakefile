@@ -96,7 +96,6 @@ task 'run', 'build and start the service', -> build -> run -> log 'service runni
 # walk 'src', (err, results) -> console.log results
 # ```
 walk = (dir, done) ->
-  log 'walk', green
   results = []
   fs.readdir dir, (err, list) ->
     return done(err, []) if err
@@ -131,7 +130,6 @@ log = (message, color, explanation) -> console.log color + message + reset + ' '
 # **and** a destination directory
 # **then** copies all non-coffee files 
 move = (src, dest) ->
-  log 'move', green
   walk src, (err, results) ->
     for f in results
       if isFileType f, ['.js', '.css', '.html']
@@ -147,7 +145,7 @@ move = (src, dest) ->
 # **and** pipe to process stdout and stderr respectively
 # **and** on child process exit emit callback if set and status is 0
 launch = (cmd, options=[], callback) ->
-  log 'launch', green
+  log JSON.stringify(cmd + options), green
   if process.platform.match(/^win/)?
     op = ['/c', cmd].concat options
     cp = spawn process.env.comspec, op, { stdio: 'inherit' }
@@ -165,7 +163,6 @@ launch = (cmd, options=[], callback) ->
 # **then** invoke launch passing coffee command
 # **and** defaulted options to compile src to lib
 build = (watch, callback) ->
-  log 'build', green
   if typeof watch is 'function'
     callback = watch
     watch = false
@@ -183,7 +180,6 @@ build = (watch, callback) ->
 # **then** convert '.coffee' to '.js'
 # **and** remove the result
 unlinkIfCoffeeFile = (file) ->
-  log 'unlinkIfCoffeeFile', green
   if file.match /\.coffee$/
     fs.unlink file.replace('src','lib').replace(/\.coffee$/, '.js'), ->
     true
@@ -195,7 +191,6 @@ unlinkIfCoffeeFile = (file) ->
 # **then** loop through files variable
 # **and** call unlinkIfCoffeeFile on each
 clean = (callback) ->
-  log 'clean', green
   try
     for file in files
       unless unlinkIfCoffeeFile file
@@ -214,7 +209,6 @@ clean = (callback) ->
 # **then* print not found message with install helper in red
 # **and* return false if not found
 moduleExists = (name) ->
-  log 'moduleExists', green
   try 
     require name 
   catch err 
@@ -228,7 +222,6 @@ moduleExists = (name) ->
 # **and** optional function as callback
 # **then** invoke launch passing mocha command
 karma = (options, callback) ->
-  log 'karma', green
   if typeof options is 'function'
     callback = options
     options = []
@@ -242,7 +235,6 @@ run = ->
   launch 'node', ['./start.js']
 
 isFileType = (file, fileTypes) ->
-  log 'isFileType', green
   for type in fileTypes
     if (file.indexOf type, file.length - type.length) != -1
       return true
