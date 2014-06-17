@@ -39,13 +39,14 @@ module.exports = function(config){
 
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : ['PhantomJS'],
 
     plugins : [
             'karma-chrome-launcher',
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-coffee-preprocessor'
+            'karma-coffee-preprocessor',
+            'karma-phantomjs-launcher'
             ],
 
     junitReporter : {
