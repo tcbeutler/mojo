@@ -231,7 +231,7 @@ karma = (options, callback) ->
   launch 'karma', options, callback
 
 run = ->
-  launch 'node', ['start.js']
+  launch 'node', ['./start.js']
 
 isFileType = (file, fileTypes) ->
   for type in fileTypes
