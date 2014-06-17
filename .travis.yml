@@ -7,3 +7,5 @@ node_js:
   - 0.10
 
 script: "cake test"
+
+before_script: "ls"
