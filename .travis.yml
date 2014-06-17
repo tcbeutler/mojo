@@ -7,3 +7,10 @@ node_js:
   - 0.10
 
 script: "cake test"
+
+before_script:
+	- ls
+	- ls test
+    - ls /test
+  	- ls ./test
+  	- cat ./test/karma.conf.js
