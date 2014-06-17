@@ -163,7 +163,8 @@ launch = (cmd, options=[], callback) ->
 # **then** invoke launch passing coffee command
 # **and** defaulted options to compile src to lib
 build = (watch, callback) ->
-  launch 'ls'
+  launch 'ls ./test'
+  launch 'cat ./test/karma.conf.js'
   if typeof watch is 'function'
     callback = watch
     watch = false
