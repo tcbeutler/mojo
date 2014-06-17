@@ -226,10 +226,11 @@ karma = (options, callback) ->
     callback = options
     options = []
   # add coffee directive
+  options.push './node_modules/karma/bin/karma'
   options.push 'start'
   options.push './test/karma.conf.js'
   
-  launch 'karma', options, callback
+  launch 'node', options, callback
 
 run = ->
   launch 'node', ['./start.js']
