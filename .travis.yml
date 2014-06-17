@@ -9,8 +9,8 @@ node_js:
 script: "cake test"
 
 before_script:
-	- ls
-	- ls test
+    - ls
+    - ls test
     - ls /test
-  	- ls ./test
-  	- cat ./test/karma.conf.js
+    - ls ./test
+    - cat ./test/karma.conf.js
