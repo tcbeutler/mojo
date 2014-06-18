@@ -1,7 +1,13 @@
 do ->
   describe 'controllers', ->
-    beforeEach ->
-      angular.module 'mojo'
+    controller = null
+    scope = null
 
-    it "should assert", ->
-      expect(1).toEqual(1);
+    beforeEach ->
+      module 'mojo'
+      inject ($rootScope, $controller) ->
+        scope = $rootScope.$new()
+        controller = $controller('DrinksCtrl', { $scope: scope })
+
+    it "should declare test", ->
+      expect scope.test == 'Drinks stuff here'

@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular-mocks' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json ionic-project@1.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'angular-mocks', null ]
+8 verbose cache add name=undefined spec="angular-mocks" args=["angular-mocks",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'angular-mocks',
+9 verbose parsed url   path: 'angular-mocks',
+9 verbose parsed url   href: 'angular-mocks' }
+10 silly lockFile 8931440b-angular-mocks angular-mocks
+11 verbose lock angular-mocks C:\Users\Tom\AppData\Roaming\npm-cache\8931440b-angular-mocks.lock
+12 silly lockFile 8931440b-angular-mocks angular-mocks
+13 silly lockFile 8931440b-angular-mocks angular-mocks
+14 verbose addNamed [ 'angular-mocks', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile e61b77e9-angular-mocks angular-mocks@
+17 verbose lock angular-mocks@ C:\Users\Tom\AppData\Roaming\npm-cache\e61b77e9-angular-mocks.lock
+18 silly addNameRange { name: 'angular-mocks', range: '*', hasData: false }
+19 verbose url raw angular-mocks
+20 verbose url resolving [ 'https://registry.npmjs.org/', './angular-mocks' ]
+21 verbose url resolved https://registry.npmjs.org/angular-mocks
+22 info trying registry request attempt 1 at 17:41:01
+23 http GET https://registry.npmjs.org/angular-mocks
+24 http 404 https://registry.npmjs.org/angular-mocks
+25 silly registry.get cb [ 404,
+25 silly registry.get   { date: 'Wed, 18 Jun 2014 22:41:02 GMT',
+25 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'cache-control': 'max-age=0',
+25 silly registry.get     'content-length': '52',
+25 silly registry.get     'accept-ranges': 'bytes',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     age: '0',
+25 silly registry.get     'x-served-by': 'cache-at52-ATL',
+25 silly registry.get     'x-cache': 'MISS',
+25 silly registry.get     'x-cache-hits': '0',
+25 silly registry.get     'x-timer': 'S1403131262.503793,VS0,VE78',
+25 silly registry.get     'keep-alive': 'timeout=10, max=50',
+25 silly registry.get     connection: 'Keep-Alive' } ]
+26 silly lockFile e61b77e9-angular-mocks angular-mocks@
+27 silly lockFile e61b77e9-angular-mocks angular-mocks@
+28 error 404 'angular-mocks' is not in the npm registry.
+28 error 404 You should bug the author to publish it
+28 error 404
+28 error 404 Note that you can also install from a
+28 error 404 tarball, folder, or http url, or git url.
+29 error System Windows_NT 6.1.7601
+30 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-mocks"
+31 error cwd f:\Projects\mojo
+32 error node -v v0.10.21
+33 error npm -v 1.3.11
+34 error code E404
+35 verbose exit [ 1, true ]

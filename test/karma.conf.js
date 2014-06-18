@@ -26,6 +26,7 @@ module.exports = function(config){
       'lib/lib/ionic/js/**/*.js',
       'lib/js/**/*.js',
       'lib/js/*.js',
+      'test/angular-mocks.js',
       'test/coffee/**/*'
     ],
 

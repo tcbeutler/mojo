@@ -145,7 +145,6 @@ move = (src, dest) ->
 # **and** pipe to process stdout and stderr respectively
 # **and** on child process exit emit callback if set and status is 0
 launch = (cmd, options=[], callback) ->
-  log JSON.stringify(cmd + options), green
   if process.platform.match(/^win/)?
     op = ['/c', cmd].concat options
     cp = spawn process.env.comspec, op, { stdio: 'inherit' }
