@@ -7,7 +7,7 @@ do ->
       module 'mojo'
       inject ($rootScope, $controller) ->
         scope = $rootScope.$new()
-        controller = $controller('DrinksCtrl', { $scope: scope })
+        controller = $controller('EventsCtrl', { $scope: scope })
 
     it "should declare test", ->
-      expect(scope.test).toEqual 'Drinks stuff here'
+      expect(scope.test).toEqual 'Events stuff here'
